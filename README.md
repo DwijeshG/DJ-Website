@@ -2,19 +2,65 @@
 <img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
 </div>
 
-# Run and deploy your AI Studio app
+# Dwijesh Gontla | Systems Architect Portfolio
 
-This contains everything you need to run your app locally.
+This is a professional portfolio website for Dwijesh Gontla, featuring integrated AI chat capabilities via Google Gemini.
 
-View your app in AI Studio: https://ai.studio/apps/drive/189EJXQPVFhdG4WeMZr91U46LqR91dnec
+## 🚀 Getting Started
 
-## Run Locally
+### Prerequisites
+- [Node.js](https://nodejs.org/) (Latest LTS recommended)
+- [Firebase CLI](https://firebase.google.com/docs/cli) (Install via `npm install -g firebase-tools`)
 
-**Prerequisites:**  Node.js
+### Setup & Local Development
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/evexity/DJ-Website.git
+   cd DJ-Website
+   ```
 
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+3. **Configure Environment Variables:**
+   Create a `.env.local` file in the root directory and add your Gemini API Key:
+   ```env
+   GEMINI_API_KEY=your_actual_key_here
+   ```
+
+4. **Run locally:**
+   ```bash
+   npm run dev
+   ```
+   The site will be available at `http://localhost:3000`.
+
+## 🚢 How to Deploy
+
+Since the Firebase project is already initialized, follow these steps to push updates live:
+
+1. **Build the project:**
+   This generates a production-ready `dist/` folder.
+   ```bash
+   npm run build
+   ```
+
+2. **Login to Firebase (if not already):**
+   ```bash
+   firebase login
+   ```
+
+3. **Deploy to Hosting:**
+   ```bash
+   firebase deploy --only hosting
+   ```
+
+**Live URL:** [https://dwijesh-gontla-portfolio.web.app](https://dwijesh-gontla-portfolio.web.app)
+
+## 🛠 Tech Stack
+- **Framework:** React 19 (TypeScript)
+- **Bundler:** Vite
+- **Styling:** Tailwind CSS (via CDN in index.html)
+- **AI Engine:** Google Gemini SDK (`@google/genai`)
+- **Hosting:** Firebase Hosting

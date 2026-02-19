@@ -1,0 +1,14 @@
+/* Base styles */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-black: #030712;
+}
+
+body {
+  background-color: var(--bg-black);
+  margin: 0;
+  padding: 0;
+}
